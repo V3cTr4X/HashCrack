@@ -1,4 +1,4 @@
-# HashCrack (Rust Hash Cracker)
+# HashCrack (Rust Hash Cracker) NOW IN DOCKERFILE
 
 HashCrack is an efficient and powerful tool for recovering passwords from hashes. Designed in Rust, this program leverages the speed and security of the language to perform brute-force and dictionary attacks, allowing users to effectively recover lost passwords.
 
@@ -49,6 +49,8 @@ HashCrack is ideal for cybersecurity professionals, researchers, and enthusiasts
 
 ## Installation
 
+- **From source**
+
 1. Clone the repository:
 
    ```bash
@@ -60,3 +62,21 @@ HashCrack is ideal for cybersecurity professionals, researchers, and enthusiasts
     ```rust
     cargo build --release
     cargo run --release
+
+---
+
+- **From Docker** 
+
+1. Build the image 
+
+  ```bash
+  docker build -t hashcrack .
+  #Is gonna install the dependencies from the image
+  ````
+
+2. Then run the container
+
+```bash
+docker run --rm --it <name> hashcrack
+#With --rm after the usage of the container he will auto-remove herself
+
