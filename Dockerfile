@@ -4,7 +4,6 @@ RUN apt-get update && apt-get install -y git pkg-config libssl-dev build-essenti
 WORKDIR /app
 RUN git clone https://github.com/v3ctr4x/HashCrack .
 RUN cargo build --release
-RUN ls -l /app/target/release/
 
 FROM alpine:3.19
 RUN apk add --no-cache bash libgcc openssl gcompat musl-dev
